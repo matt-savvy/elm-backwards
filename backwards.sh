@@ -7,7 +7,7 @@ reset() {
     git checkout HEAD tests >/dev/null 2>&1
 }
 
-# run current code against the tests for all previous versions.
+# run current code against the tests for all versions passed as arguments.
 # stops at first version that fails.
 check_versions() {
     for i in "${VERSIONS[@]}"; do
@@ -23,7 +23,7 @@ check_versions() {
         fi
     done
 
-    echo "Passes tests for previous tags"
+    echo "Passes tests for all versions."
     reset
     return 0
 }
