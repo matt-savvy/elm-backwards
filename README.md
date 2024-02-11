@@ -57,5 +57,5 @@ However, there's nothing stopping you from making a breaking change if it preser
 -- Returns True when n is actually odd!
 isEven : Int -> Bool
 isEven n =
-    modBy 2 n == 0
+    modBy 2 n == 1
 ```
